@@ -1,0 +1,10 @@
+image:
+  file: Dockerfile
+ports:
+- port: 8050
+  onOpen: open-preview
+- port: 8888
+  onOpen: open-browser
+tasks:
+- command: pyenv global 3.8.11 &&
+           chmod +x setup_python_env_conda.sh
