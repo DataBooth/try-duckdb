@@ -14,7 +14,8 @@ source ~/.bashrc
 export SHELL=/bin/bash
 
 #Install conda packages for to run jupyter notebook
-conda install -y -c conda-forge ipykernel
+conda install --name base notebook -y
+conda install --name -y -c conda-forge ipykernel
 
 # Some extra packages for your environments
 # conda install -y -c conda-forge tensorflow
@@ -31,5 +32,10 @@ conda install -y -c conda-forge ipykernel
 # conda install -y -c conda-forge dash-table
 # conda install -y -c conda-forge rx
 # conda install -y -c conda-forge dash-core-components
+
+
+pip install duckdb
+
+python -m ipykernel install --user --name=base
 
 echo Done...
